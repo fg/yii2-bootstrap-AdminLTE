@@ -11,9 +11,7 @@
         }
     ],
     "require": {
-        "yiisoft/yii2": "*",
-	    "bower-asset/jquery-cookie":"*"
-	    "bower-asset/font-awesome":"*"
+        "yiisoft/yii2": "*"
     },
     "autoload": {
         "psr-4": {
