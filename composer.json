@@ -1,0 +1,23 @@
+{
+    "name": "cszchen/alte",
+    "description": "Widgets for AdminLTE theme",
+    "type": "yii2-extension",
+    "keywords": ["yii2","widget","adminlte"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "cartmanchen",
+            "email": "me@csz.link"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*",
+	    "bower-asset/jquery-cookie":"*"
+	    "bower-asset/font-awesome":"*"
+    },
+    "autoload": {
+        "psr-4": {
+            "cszchen\\alte\\": ""
+        }
+    }
+}
