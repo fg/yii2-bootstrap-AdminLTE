@@ -20,7 +20,6 @@ class AlteAsset extends AssetBundle
     public $depends = [
         'yii\bootstrap\BootstrapAsset',
         'yii\bootstrap\BootstrapPluginAsset',
-        'cszchen\fontawe\FontAweAsset',
     ];
     
     public function init()
