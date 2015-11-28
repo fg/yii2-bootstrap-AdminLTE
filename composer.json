@@ -1,5 +1,6 @@
 {
     "name": "cszchen/alte",
+    "version": "1.0.2",
     "description": "Widgets for AdminLTE theme",
     "type": "yii2-extension",
     "keywords": ["yii2","widget","adminlte"],
@@ -11,7 +12,8 @@
         }
     ],
     "require": {
-        "yiisoft/yii2": "*"
+        "yiisoft/yii2": "*",
+        "yiisoft/yii2-bootstrap": "*"
     },
     "autoload": {
         "psr-4": {

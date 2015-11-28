@@ -3,7 +3,6 @@
 namespace cszchen\alte\widgets;
 
 use yii\bootstrap\Html;
-use yii\bootstrap\Nav;
 
 class NavBar extends \yii\bootstrap\NavBar
 {
@@ -18,7 +17,7 @@ class NavBar extends \yii\bootstrap\NavBar
      * - options: array, optional, the HTML attributes of the item container (LI).
      * - active: boolean, optional, whether the item should be on active state or not.
      * - dropDownOptions: array, optional, the HTML options that will passed to the [[Dropdown]] widget.
-     * - items: array|string, optional, the configuration array for creating a [[Dropdown]] widget, 
+     * - items: array|string, optional, the configuration array for creating a [[Dropdown]] widget,
      *   or a string representing the dropdown menu. Note that Bootstrap does not support sub-dropdown menus.
      *
      * If a menu item is a string, it will be rendered directly without HTML encoding.
