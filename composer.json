@@ -1,6 +1,5 @@
 {
     "name": "cszchen/alte",
-    "version": "1.0.2",
     "description": "Widgets for AdminLTE theme",
     "type": "yii2-extension",
     "keywords": ["yii2","widget","adminlte"],
