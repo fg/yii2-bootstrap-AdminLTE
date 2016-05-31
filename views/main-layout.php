@@ -93,7 +93,7 @@ AlteAsset::register($this);
 
     </div>
 
-    <footer class="main-footer"></footer>
+    <footer class="main-footer">This is footer.</footer>
 </div>
 <?php $this->endBody();?>
 </body>
