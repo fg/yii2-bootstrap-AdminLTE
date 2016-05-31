@@ -11,6 +11,19 @@ Install
 Layout file
 ===
  `@vendor/cszchen/alte/veiws/main-layout.php`
+ 
+example:
+```php
+class SiteController extends \yii\web\Controller
+ {
+    public $layout = '@vendor/cszchen/alte/veiws/main-layout.php';
+    
+    public function actionIndex()
+    {
+        return $this->render('index');
+    }
+ }
+```
   
 
 NavBar
@@ -60,8 +73,10 @@ Box
 ```php
 Box::begin([
     'type' => 'primary',
+    'title' => 'Box title',
     'refreshUrl' => '/userinfo',
-    'tools' => ['refresh', 'collapse', 'remove']
+    'tools' => ['refresh', 'collapse', 'remove'],
+    'collapsed' => false
 ]);
 echo "cszchen/alte";
 Box::end();
