@@ -4,15 +4,17 @@ It make it easy to build a bootstrap admin panel.
 
 
 Install
-=======
+===
 
 `composer require "cszchen/alte": ">=2.0.0"`
 
-Layout file
+How to Use
 ===
- `@vendor/cszchen/alte/veiws/main-layout.php`
+layout sample file: `@vendor/cszchen/alte/veiws/main-layout.php`
  
 example:
+---
+**controllers/SiteController.php**
 ```php
 class SiteController extends \yii\web\Controller
  {
@@ -25,6 +27,24 @@ class SiteController extends \yii\web\Controller
  }
 ```
   
+**views/site/index.php**
+```php
+use cszchen\alte\widgets\Box;
+
+$this->title = "Title here!";
+Box::begin([
+  'type' => 'primary',
+  'title' => 'Box title',
+  'refreshUrl' => '/userinfo',
+  'tools' => ['refresh', 'collapse', 'remove'],
+  'collapsed' => false
+]);
+echo "cszchen/alte";
+Box::end();
+```
+
+**screen**
+![](http://deeppic.b0.upaiyun.com/1605/V1u04MU7W.png)
 
 NavBar
 ---
@@ -66,25 +86,6 @@ echo Sidebar::widget([
     ],
 ]);
 ```
-
-views/site/index.php:
-```php
-use cszchen\alte\widgets\Box;
-
-$this->title = "Title here!";
-Box::begin([
-  'type' => 'primary',
-  'title' => 'Box title',
-  'refreshUrl' => '/userinfo',
-  'tools' => ['refresh', 'collapse', 'remove'],
-  'collapsed' => false
-]);
-echo "cszchen/alte";
-Box::end();
-```
-
-screen:
-![](http://deeppic.b0.upaiyun.com/1605/Ek0sQfUQW.png)
 
 Box
 ---
