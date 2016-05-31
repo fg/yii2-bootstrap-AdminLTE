@@ -9,7 +9,7 @@ Install
 `composer require "cszchen/alte": ">=2.0.0"`
 
 Layout file
- ===
+===
  `@vendor/cszchen/alte/veiws/main-layout.php`
   
 
@@ -23,13 +23,13 @@ NavBar::begin([
         [
             'label' => 'Home', 
             'url' => ['/site/index'],
-            'icon' => 'fa fa-dashboard test-green'
+            'icon' => 'fa fa-dashboard test-green',
             'items'=>[
                 ['label' => 'child#1', 'icon' => 'fa fa-user'],
                 ['label' => 'child#2', 'url' => '#']
             ]
         ],
-        ['label' => 'About', 'url' => ['/site/about']]
+        ['label' => 'About', 'small' => 15, 'url' => ['/site/about']]
      ] 
 ]);
 NavBar::end();
