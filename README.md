@@ -3,70 +3,101 @@ The Bootstrap template AdminLTE widgets for yii2 framework.
 It make it easy to build a bootstrap admin panel.
 
 
-Get started
+Install
 ===
 
-Bulid the layout file(`@app/views/layouts/main.php`);
+`composer require "cszchen/alte": ">=2.0.0"`
+
+How to Use
+===
+layout sample file: `@vendor/cszchen/alte/veiws/main-layout.php`
+ 
+example:
 ---
-
-    use cszchen\alte\AdminLTE; 
-    use cszchen\alte\widgets\NavBar; 
-    use cszchen\alte\widgets\Sidebar; 
-
-Then you can set the layout and the options, it will create the css class whitch will used in some tag
-
-    AdminLTE::register($this);
-    AdminLTE::setLayout(AdminLTE::LAYOUT_WRAPPER, AdminLTE::OPTION_FIXED);
-    AdminLTE::setSkin('skin-blue');
-    ...
+**controllers/SiteController.php**
+```php
+class SiteController extends \yii\web\Controller
+ {
+    public $layout = '@vendor/cszchen/alte/veiws/main-layout.php';
     
-    $option = [];
-    Html::addCssClass($option, AdminLTE::getOptionCssClass());
-    echo Html::beginTag("body", $option);//bigen the body tag
+    public function actionIndex()
+    {
+        return $this->render('index');
+    }
+ }
+```
   
-    $this->beginBody();
-    $option = [];
-    Html::addCssClass($option, AdminLTE::getLayoutCssClass());
-    echo Html::beginTag("div", $option);//the tag whitch layout the view
-    
+**views/site/index.php**
+```php
+use cszchen\alte\widgets\Box;
+
+$this->title = "Title here!";
+Box::begin([
+  'type' => 'primary',
+  'title' => 'Box title',
+  'refreshUrl' => '/userinfo',
+  'tools' => ['refresh', 'collapse', 'remove'],
+  'collapsed' => false
+]);
+echo "cszchen/alte";
+Box::end();
+```
+
+**screen**
+![](http://deeppic.b0.upaiyun.com/1605/V1u04MU7W.png)
 
 NavBar
 ---
-
-    NavBar::begin([
-        'brandLabel' => 'NavBar Test',
-        'brandLabelSm' => 'Nbt',
-        'items' => [
-              ['label' => 'Home', 'url' => ['/site/index'], 'items'=>[['label'=>'yes'],['label'=>'no', 'url'=>'#']]],
-              ['label' => 'About', 'url' => ['/site/about']],
-         ],
-            
-    ]);
-          
-    NavBar::end();
-
+```php
+NavBar::begin([
+    'brandLabel' => 'cszchen/alte',
+    'brandLabelSm' => 'Alte',
+    'items' => [
+        [
+            'label' => 'Home', 
+            'url' => ['/site/index'],
+            'icon' => 'fa fa-dashboard test-green',
+            'items'=>[
+                ['label' => 'child#1', 'icon' => 'fa fa-user'],
+                ['label' => 'child#2', 'url' => '#']
+            ]
+        ],
+        ['label' => 'About', 'small' => 15, 'url' => ['/site/about']]
+     ] 
+]);
+NavBar::end();
+```
 
 SideBar
 ---
-
-    echo Sidebar::widget([
-        //'search' => false,
-        'items' => [
-            ['label'=>'level1', 'url'=>'#', 'small'=>1, 'items'=>[['label'=>'level2', 'url'=>'sg', 'items'=>[['label'=>'level3']]]]]
-        ],
-    ]);
+```php
+echo Sidebar::widget([
+    //'search' => false,
+    'items' => [
+        [
+            'label' => 'level1', 
+            'url' => '#', 
+            'small' => 1, 
+            'items' => [
+                ['label' => 'level2', 'url' => 'sg'],
+                ['label' => 'level2', 'url' => 'sg', 'items' => [['label' => 'level3']]]
+            ]
+        ]
+    ],
+]);
+```
 
 Box
 ---
 
-    Box::begin([
-        'type' => 'primary',
-        'refreshUrl' => '/user/login',
-        'tools' => ['refresh', 'collapse', 'remove']
-    ]);
-    echo "cszchen alte";
-    Box::end();
-
-
-Installed
-===
+```php
+Box::begin([
+    'type' => 'primary',
+    'title' => 'Box title',
+    'refreshUrl' => '/userinfo',
+    'tools' => ['refresh', 'collapse', 'remove'],
+    'collapsed' => false
+]);
+echo "cszchen/alte";
+Box::end();
+```

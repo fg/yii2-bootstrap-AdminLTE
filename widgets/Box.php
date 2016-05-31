@@ -68,8 +68,8 @@ class Box extends Widget
         }
         if ($this->collapsed) {
             Html::addCssClass($this->options,'collapsed-box');
-            if (!in_array(self::TOOL_COLLAPSE, $this->tools) || !isset($this->tools[self::TOOL_COLLAPSE])) {
-                array_unshift($this->tools[], self::TOOL_COLLAPSE);
+            if (!in_array(self::TOOL_COLLAPSE, $this->tools)) {
+                array_unshift($this->tools, self::TOOL_COLLAPSE);
             }
         }
         
