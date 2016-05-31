@@ -44,7 +44,7 @@ Box::end();
 ```
 
 **screen**
-![](http://deeppic.b0.upaiyun.com/1605/V1u04MU7W.png)
+![](http://deeppic.b0.upaiyun.com/1605/Vkfl3MLQb.png)
 
 NavBar
 ---
@@ -78,9 +78,10 @@ echo Sidebar::widget([
             'label' => 'level1', 
             'url' => '#', 
             'small' => 1, 
+            'icon' => 'fa fa-dashboard text-green',
             'items' => [
-                ['label' => 'level2', 'url' => 'sg'],
-                ['label' => 'level2', 'url' => 'sg', 'items' => [['label' => 'level3']]]
+                ['label' => 'level2', 'url' => '#', 'icon' => 'fa fa-user text-red'],
+                ['label' => 'level2', 'url' => '#', 'items' => [['label' => 'level3']]]
             ]
         ]
     ],
