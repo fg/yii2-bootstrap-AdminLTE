@@ -67,6 +67,25 @@ echo Sidebar::widget([
 ]);
 ```
 
+views/site/index.php:
+```php
+use cszchen\alte\widgets\Box;
+
+$this->title = "Title here!";
+Box::begin([
+  'type' => 'primary',
+  'title' => 'Box title',
+  'refreshUrl' => '/userinfo',
+  'tools' => ['refresh', 'collapse', 'remove'],
+  'collapsed' => false
+]);
+echo "cszchen/alte";
+Box::end();
+```
+
+screen:
+![](http://deeppic.b0.upaiyun.com/1605/Ek0sQfUQW.png)
+
 Box
 ---
 
