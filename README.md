@@ -10,7 +10,7 @@ Install
 
 How to Use
 ===
-layout sample file: `@vendor/cszchen/alte/veiws/main-layout.php`
+layout sample file: `@vendor/cszchen/alte/views/main-layout.php`
  
 example:
 ---
@@ -18,7 +18,7 @@ example:
 ```php
 class SiteController extends \yii\web\Controller
  {
-    public $layout = '@vendor/cszchen/alte/veiws/main-layout.php';
+    public $layout = '@vendor/cszchen/alte/views/main-layout.php';
     
     public function actionIndex()
     {
